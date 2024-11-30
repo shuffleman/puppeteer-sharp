@@ -94,9 +94,8 @@ namespace PuppeteerSharp
         /// <summary>
         /// Cookie partition key. The site of the top-level URL the browser was visiting at the
         /// start of the request to the endpoint that set the cookie. Supported only in Chrome.
-        /// TODO: a breaking change is needed to support other partition keys.
+        /// TODO: Remove [JsonConverter(typeof(CookiePartitionKeyConverter))] to fix parse error.
         /// </summary>
-        [JsonConverter(typeof(CookiePartitionKeyConverter))]
         public string PartitionKey { get; set; }
 
         /// <summary>
